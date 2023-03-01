@@ -1,3 +1,5 @@
+/* Jean-Baptiste des Moutis, Id JBdesMoutis */
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initial clean up. DO NOT REMOVE.
   initialCleanup();
@@ -14,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     new_div.addEventListener("click",
     () => {
       console.log("je suis un enfant de la page initiale et tu m'as cliqué dessus")
-      new_div.style.backgroundColor = "blue"
+      var randomColor = Math.floor(Math.random()*16777215).toString(16);
+      new_div.style.backgroundColor = '#' + randomColor
     })
   }
 })
@@ -24,7 +27,8 @@ for (let carre of square.children) {
   carre.addEventListener("click", 
   () => {
     console.log("Tu as bien cliqué")
-    carre.style.backgroundColor = "green"
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    carre.style.backgroundColor = '#' + randomColor
   })
 }
 
